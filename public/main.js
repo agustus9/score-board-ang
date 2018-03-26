@@ -1,5 +1,14 @@
-const main = () => {
-  document.querySelector('h1').textContent += '?'
-}
+angular
+  .module("scoreboardApp", [])
+  .controller("mainController", ($scope) => {
 
-document.addEventListener('DOMContentLoaded', main)
+    $scope.updateScore = "";
+    $scope.displayScore = () => {
+      $scope.updateName = $scope.score;
+    }
+    $scope.displayName = "";
+    $scope.updateName = () => {
+      $scope.displayName = $scope.name;
+    }
+  }
+  );
