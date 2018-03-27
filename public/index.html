@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Score Board Ang</title>
-    <link rel="stylesheet" href="./screen.css">
-  </head>
-  <body ng-app="scoreboardApp" ng-controller="mainController">
-    <h1>Score Board</h1>
-    <section class="board">
-      <h1>My Score Board</h1>
-      </section>
-      <section class="score">
-       <h1>Team 1 current score is : {{updateScore}}</h1>
-       <section class="team1-result">
-        <p class="team1"></p>
-       </section>
-       <section class="team2-result">
-        <p class="team2"></p>
-       </section>
-       <h1>Team 2 current score is : {{updateScore}}</h1>
-      </section>
-      <section class="team1">
-        <h1>Update Team 1 Name  <input type="text" name="" id="" ng-model="name"><button ng-click="updateTeam1Name()">Update Name</button> </h1>
-      <section class="1-score">
-        <h1>Update Team 1 Score <button type="button" ng-model="score" ng-click="updateTeam1Score()">Add 1</button></h1>
-      </section>
-      </section>
-      <section class="team2">
-        <h1>Update Team 2 Name  <input type="text" name="" id="" ng-model="name"><button ng-click="updateTeam2Name()">Update Name</button></h1>
-      <section class="2-score">
-        <h1>Update Team 2 Score <button type="button" ng-model="score" ng-click="updateTeam2Score()">subtract 1</button></h1>
-      </section>
-      </section>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="./main.js" charset="utf-8"></script>
-  </body>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Score Board Ang</title>
+  <link rel="stylesheet" href="./screen.css">
+</head>
+
+<body ng-app="scoreboardApp" ng-controller="mainController">
+  <h1>Score Board</h1>
+  <section>
+    <h1>Team 1 current score is : {{team1Score}}</h1>
+    <h1>Team 2 current score is : {{team2Score}}</h1>
+  </section>
+  <section>
+    <h1>Team 1 current name is : {{team1Name}}</h1>
+      <input type="text" name="" id="" ng-model="name">
+      <button ng-click="updateTeam1Name()">Update Name</button>
+    <section>
+      <h1>Update Team 1 score : 
+        <button type="button" ng-click="updateTeam1Score()">Add</button>
+        <button type="button" ng-click="updateTeam1ScoreMin()">Subtract</button>
+      </h1>
+    </section>
+  </section>
+  <section>
+    <h1>Update Team 2 current name is : {{team2Name}}</h1>
+      <input type="text" name="" id="" ng-model="name">
+      <button ng-click="updateTeam2Name()">Update Name</button>
+    <section>
+      <h1>Update Team 2 score : 
+        <button type="button" ng-click="updateTeam2Score()">Add</button>
+      </h1>
+    </section>
+  </section>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+</body>
+
 </html>

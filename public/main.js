@@ -5,20 +5,23 @@ const getRandomNumber = () => {
 angular
   .module("scoreboardApp", [])
   .controller("mainController", ($scope) => {
+    $scope.team1Score =0 ;
+   
+    
 
-    $scope.updateTeam1Score = "";
-    $scope.displayTeam1Score = () => {
-      $scope.updateTeam1Score = $scope.score;
+    $scope.updateTeam1Score = () => {
+      $scope.team1Score++;
     }
 
-    $scope.updateTeam2Score = "";
-    $scope.displayTeam2Score = () => {
-      $scope.updateTeam1Score = $scope.score;
+    $scope.team2Score =0 ;
+    $scope.updateTeam2Score = () => {
+      $scope.team2Score++;
     }
-    $scope.displayTeam1Name = "";
+    
+    $scope.team1Name = "";
     $scope.updateTeam1Name = () => {
-      // $scope.displayTeam1Name = $scope.name;
-      $scope.displayTeam1Name = $scope.updateTeam1Name;
+      $scope.displayTeam1Name = $scope.name;
+      // $scope.team1Name = $scope.updateTeam1Name;
     }
 
     $scope.displayTeam2Name = "";
@@ -26,14 +29,14 @@ angular
       // $scope.displayTeam1Name = $scope.name;
       $scope.displayTeam2Name = $scope.updateTeam2Name;
     }
-    $scope.updatTeam1Score = 0;
-    $scope.addNumber = () => {
-      $scope.addNumber.push(updateTeam1Score);
-    }
+    // $scope.updatTeam1Score = 0;
+    // $scope.addNumber = () => {
+    //   $scope.addNumber.push(updateTeam1Score);
+    // }
 
-    $scope.updatTeam2Score = 0;
-    $scope.addNumber = () => {
-      $scope.addNumber.push(updateTeam2Score);
-    }
+    // $scope.updatTeam2Score = 0;
+    // $scope.addNumber = () => {
+    //   $scope.addNumber.push(updateTeam2Score);
+    // }
   }
   );
